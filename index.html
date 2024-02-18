@@ -3,90 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impress Her Webpage</title>
+  <title>Story Flipbook</title>
+  <!-- Include Turn.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.0.2/turn.js"></script>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f0f0f0;
       margin: 0;
-      padding: 0;
+      overflow: hidden;
     }
 
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+    #flipbook {
+      width: 100vw;
+      height: 100vh;
     }
 
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
+    .page {
+      background: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-
-    section {
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      color: #333;
-    }
-
-    p {
-      line-height: 1.6;
-      color: #555;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Impress Her Webpage</h1>
-</header>
+<div id="flipbook">
+  <div class="page"> <!-- Page 1 Content -->
+    <h1>Chapter 1</h1>
+    <p>Once upon a time...</p>
+  </div>
+  <div class="page"> <!-- Page 2 Content -->
+    <h1>Chapter 2</h1>
+    <p>In a land far, far away...</p>
+  </div>
+  <!-- Add more pages with your story content -->
+</div>
 
-<main>
-  <section>
-    <h2>Dear [Her Name],</h2>
-    <p>
-      I created this webpage to express my feelings and appreciation for you. You are special, and I wanted to do something unique to show you how much you mean to me.
-    </p>
-    <!-- Add more personalized content here -->
-  </section>
-
-  <section>
-    <h2>Memories Together</h2>
-    <p>
-      Here are some wonderful memories we've shared together. [Include photos, videos, or a slideshow]
-    </p>
-    <!-- Add multimedia content here -->
-  </section>
-
-  <section>
-    <h2>Your Favorites</h2>
-    <p>
-      I've included some of your favorite things on this page. [List favorite colors, interests, etc.]
-    </p>
-    <!-- Add personalized content here -->
-  </section>
-</main>
-
-<footer>
-  <p>Created with ❤️ by [Your Name]</p>
-</footer>
+<script>
+  // Initialize the flipbook
+  $("#flipbook").turn({
+    width: '100vw',
+    height: '100vh',
+    autoCenter: true
+  });
+</script>
 
 </body>
 </html>
